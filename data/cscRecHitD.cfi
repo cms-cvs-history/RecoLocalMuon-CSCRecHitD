@@ -1,0 +1,47 @@
+# parameters for CSC rechit building
+
+module csc2DRecHits = CSCRecHitDProducer {
+     untracked bool CSCIsRunningOnData           = true
+     untracked bool CSCDebug                     = false
+###########################################################
+#    Which digis:
+###########################################################
+###  When using data from unpacker
+     string CSCStripDigiProducer                 = "muonCSCDigis"
+     string CSCWireDigiProducer                  = "muonCSCDigis"
+###########################################################
+#    Calibration info:
+     untracked bool CSCUseCalibrations           = true
+###########################################################
+#    Parameters for wire hits
+     untracked int32  CSCWireClusterDeltaT       = 1
+###########################################################
+#    Parameters for strip hits
+###########################################################
+     untracked double CSCStripPeakThreshold      = 20.
+     untracked double CSCStripClusterChargeCut   = 45.
+     untracked int32  CSCStripClusterSize        = 3
+     # next three not used currently
+     # the step size is in units of strip width 
+     untracked double CSCCalibrationSystematics  = 0.015
+     untracked double CSCStripxtalksOffset       = 0.03
+     untracked double CSCStripxtalksSystematics  = 0.01
+###########################################################
+#    Parameters for 2-D hits (not used currently)
+###########################################################
+###  To be set once wire digis have timing info:
+     untracked int32  CSCstripWireDeltaTime      = 8
+###  This was not fully developed and currently NOT working
+     untracked bool CSCproduce1DHits             = false
+###########################################################
+#    Parameters for coordinate and uncertainty calculations
+#    Do not change them freely...
+###########################################################
+#    3 time bins noise (in ADC counts)      
+     untracked double NoiseLevel                 = 7.0
+#    a XT asymmetry model parameter 
+     untracked double XTasymmetry                = 0.005 
+#    constant systematics (in cm)
+     untracked double ConstSyst                   = 0.03
+##############################################################
+}
