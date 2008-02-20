@@ -1,7 +1,6 @@
 # parameters for CSC rechit building
 
 module csc2DRecHits = CSCRecHitDProducer {
-     untracked bool CSCIsRunningOnData           = true
      untracked bool CSCDebug                     = false
 ###########################################################
 #    Which digis:
@@ -18,14 +17,10 @@ module csc2DRecHits = CSCRecHitDProducer {
 ###########################################################
 #    Parameters for strip hits
 ###########################################################
-     untracked double CSCStripPeakThreshold      = 20.
-     untracked double CSCStripClusterChargeCut   = 45.
+     untracked double CSCStripPeakThreshold      = 10.
+     untracked double CSCStripClusterChargeCut   = 25.
      untracked int32  CSCStripClusterSize        = 3
-     # next three not used currently
-     # the step size is in units of strip width 
-     untracked double CSCCalibrationSystematics  = 0.015
      untracked double CSCStripxtalksOffset       = 0.03
-     untracked double CSCStripxtalksSystematics  = 0.01
 ###########################################################
 #    Parameters for 2-D hits (not used currently)
 ###########################################################
