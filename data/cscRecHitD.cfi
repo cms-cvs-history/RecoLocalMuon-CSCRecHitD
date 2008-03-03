@@ -11,6 +11,7 @@ module csc2DRecHits = CSCRecHitDProducer {
 ###########################################################
 #    Calibration info:
      untracked bool CSCUseCalibrations           = true
+     bool readBadChannels = false
 ###########################################################
 #    Parameters for wire hits
      untracked int32  CSCWireClusterDeltaT       = 1
