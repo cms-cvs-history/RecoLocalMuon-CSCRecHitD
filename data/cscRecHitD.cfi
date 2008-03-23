@@ -1,7 +1,6 @@
 # parameters for CSC rechit building
 
 module csc2DRecHits = CSCRecHitDProducer {
-     untracked bool CSCDebug                     = false
 ###########################################################
 #    Which digis:
 ###########################################################
@@ -20,15 +19,14 @@ module csc2DRecHits = CSCRecHitDProducer {
 ###########################################################
      untracked double CSCStripPeakThreshold      = 10.
      untracked double CSCStripClusterChargeCut   = 25.
-     untracked int32  CSCStripClusterSize        = 3
      untracked double CSCStripxtalksOffset       = 0.03
 ###########################################################
 #    Parameters for 2-D hits (not used currently)
 ###########################################################
+     untracked bool CSCDebug                     = false
+     untracked int32  CSCStripClusterSize        = 3
 ###  To be set once wire digis have timing info:
      untracked int32  CSCstripWireDeltaTime      = 8
-###  This was not fully developed and currently NOT working
-     untracked bool CSCproduce1DHits             = false
 ###########################################################
 #    Parameters for coordinate and uncertainty calculations
 #    Do not change them freely...
