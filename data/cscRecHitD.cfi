@@ -29,13 +29,9 @@ module csc2DRecHits = CSCRecHitDProducer {
      untracked int32  CSCstripWireDeltaTime      = 8
 ###########################################################
 #    Parameters for coordinate and uncertainty calculations
-#    Do not change them freely...
+#    Data and MC parameters are (still) different
+#    Use cscRecHitD_data.cff if you run on data  
 ###########################################################
-#    3 time bins noise (in ADC counts)      
-     untracked double NoiseLevel                 = 7.0
-#    a XT asymmetry model parameter 
-     untracked double XTasymmetry                = 0.005 
-#    constant systematics (in cm)
-     untracked double ConstSyst                   = 0.03
+     include "RecoLocalMuon/CSCRecHitD/data/cscRecHitD.cff"
 ##############################################################
 }
