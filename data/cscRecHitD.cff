@@ -5,6 +5,7 @@
 # These are empirical values. 
 # To be extracted from measurements (DB)
 ###########################################################
+block cscRecHitDParameters = {
 #    3 time bins noise (in ADC counts)
      untracked double NoiseLevel_ME1a                 = 7.0
      untracked double NoiseLevel_ME1b                 = 7.0
@@ -37,3 +38,5 @@
      untracked double ConstSyst_ME31                   = 0.060
      untracked double ConstSyst_ME32                   = 0.060
      untracked double ConstSyst_ME41                   = 0.060
+}
+

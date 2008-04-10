@@ -1,4 +1,5 @@
 # parameters for CSC rechit building
+include "RecoLocalMuon/CSCRecHitD/data/cscRecHitD.cff"
 
 module csc2DRecHits = CSCRecHitDProducer {
 ###########################################################
@@ -32,6 +33,6 @@ module csc2DRecHits = CSCRecHitDProducer {
 #    Data and MC parameters are (still) different
 #    Use cscRecHitD_data.cff if you run on data  
 ###########################################################
-     include "RecoLocalMuon/CSCRecHitD/data/cscRecHitD.cff"
+     using cscRecHitDParameters
 ##############################################################
 }
