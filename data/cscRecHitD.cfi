@@ -6,12 +6,12 @@ module csc2DRecHits = CSCRecHitDProducer {
 #    Which digis:
 ###########################################################
 ###  When using data from unpacker
-     string CSCStripDigiProducer                 = "muonCSCDigis"
-     string CSCWireDigiProducer                  = "muonCSCDigis"
+     InputTag stripDigiTag  = muonCSCDigis:MuonCSCStripDigi
+     InputTag wireDigiTag   = muonCSCDigis:MuonCSCWireDigi
 ###########################################################
-     string CSCStripDigiTag                     = "MuonCSCStripDigi"
-     string CSCWireDigiTag                      = "MuonCSCWireDigi"
-###########################################################
+###  When using data from simulation
+#     InputTag stripDigiTag = simMuonCSCDigis:MuonCSCStripDigi
+#     InputTag wireDigiTag  = simMuonCSCDigis:MuonCSCWireDigi
 ###########################################################
 #    Calibration info:
      untracked bool CSCUseCalibrations           = true
