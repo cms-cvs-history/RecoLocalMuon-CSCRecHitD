@@ -23,6 +23,9 @@ csc2DRecHits = cms.EDProducer("CSCRecHitDProducer",
     #
     #    Calibration info:
     CSCUseCalibrations = cms.untracked.bool(True),
+    #    Pedestal treatment
+    CSCUseStaticPedestals = cms.bool(False),
+    CSCNoOfTimeBinsForDynamicPedestal = cms.int32(2),
     #
     #    Which digis:
     #
@@ -38,6 +41,7 @@ csc2DRecHits = cms.EDProducer("CSCRecHitDProducer",
     #
     CSCDebug = cms.untracked.bool(False),
     readBadChannels = cms.bool(False),
+    readBadChambers = cms.bool(False),
     CSCStripClusterChargeCut = cms.untracked.double(25.0)
 )
 
